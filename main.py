@@ -20,7 +20,7 @@ def func(query):
         if val==0:
             result.append("not found")
         else:
-            result.append(str(query[2]))
+            result.append(str(query[1]))
             
 while (count!=n):
     query = input().split()
