@@ -5,15 +5,6 @@ result = []
 n = int(input())
 count = 0
 
-while (count!=n):
-    query = input().split()
-    count+=1
-    func(query)
-    
-
-    
-print('\n'.join(result))
-
 
 def func(query):
     if query[0] == "add":
@@ -30,6 +21,18 @@ def func(query):
             result.append("not found")
         else:
             result.append(str(query[2]))
+            
+while (count!=n):
+    query = input().split()
+    count+=1
+    func(query)
+    
+
+    
+print('\n'.join(result))
+
+
+
             
    
         
