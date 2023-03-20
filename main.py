@@ -14,7 +14,7 @@ def func(query):
         
     elif query[0] == "del":
         try:
-            hashmap.pop(number, )
+            hashmap.pop(number)
         except KeyError:
             pass
         
