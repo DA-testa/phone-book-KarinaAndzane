@@ -21,7 +21,7 @@ def func(query):
         if val==0:
             result.append("not found")
         else:
-            result.append(str(val)))
+            result.append(str(val))
             
 while (count!=n):
     query = input().split()
