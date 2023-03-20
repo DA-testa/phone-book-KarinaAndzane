@@ -13,7 +13,10 @@ def func(query):
         
         
     elif query[0] == "del":
-        hashmap.pop(number, None)
+        try:
+            hashmap.pop(number, )
+        except KeyError:
+            pass
         
         
     elif query[0] == "find":
