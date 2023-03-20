@@ -17,7 +17,7 @@ def func(query):
         
     elif query[0] == "find":
         val = hashmap.get(query[1])
-        if val==null:
+        if val==0:
             result.append("not found")
         else:
             result.append(str(query[2]))
