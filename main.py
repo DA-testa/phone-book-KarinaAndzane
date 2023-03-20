@@ -21,7 +21,7 @@ def func(query):
         
     elif query[0] == "find":
         val = hashmap.get(number)
-        if val==0:
+        if val==None:
             result.append("not found")
         else:
             result.append(str(val))
