@@ -7,20 +7,21 @@ count = 0
 
 
 def func(query):
+    number=int(query[1])
     if query[0] == "add":
-        hashmap.update({query[1]: str(query[2])})
+        hashmap.update({number: str(query[2])})
         
         
     elif query[0] == "del":
-        hashmap.pop(query[1])
+        hashmap.pop(number)
         
         
     elif query[0] == "find":
-        val = hashmap.get(query[1])
+        val = hashmap.get(number)
         if val==0:
             result.append("not found")
         else:
-            result.append(str(query[1]))
+            result.append(str(val)))
             
 while (count!=n):
     query = input().split()
