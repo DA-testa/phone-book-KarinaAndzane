@@ -13,7 +13,7 @@ def func(query):
         
         
     elif query[0] == "del":
-        hashmap.pop(number)
+        hashmap.pop(number, None)
         
         
     elif query[0] == "find":
