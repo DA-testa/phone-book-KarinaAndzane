@@ -1,50 +1,36 @@
 # python3
 
-hashmap=dict()
-result = []
-n = int(input())
-count = 0
+# hashmap=dict()
+# result = []
+# n = int(input())
+# count = 0
 
-
-def func(query):
-    number=int(query[1])
-    if query[0] == "add":
-        hashmap.update({number: str(query[2])})
+# def func(query):
+#     number=int(query[1])
+#     if query[0] == "add":
+#         hashmap.update({number: str(query[2])})
         
+#     elif query[0] == "del":
+#         try:
+#             hashmap.pop(number)
+#         except KeyError:
+#             pass
         
-    elif query[0] == "del":
-        try:
-            hashmap.pop(number)
-        except KeyError:
-            pass
-        
-        
-    elif query[0] == "find":
-        val = hashmap.get(number)
-        if val==None:
-            result.append("not found")
-        else:
-            result.append(str(val))
+#     elif query[0] == "find":
+#         val = hashmap.get(number)
+#         if val==None:
+#             result.append("not found")
+#         else:
+#             result.append(str(val))
             
-while (count!=n):
-    query = input().split()
-    count+=1
-    func(query)
+# while (count!=n):
+#     query = input().split()
+#     count+=1
+#     func(query)
     
+# print('\n'.join(result))
 
-    
-print('\n'.join(result))
-
-
-
-            
-   
-        
-        
-        
-   
-    
-    
+--------------------------------------------------------------------------------
 
 # class Query:
 #     def __init__(self, query):
