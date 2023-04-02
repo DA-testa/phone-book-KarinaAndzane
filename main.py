@@ -50,7 +50,7 @@ def hash_function(number):
 def add (buckets,number, name):
         hash = hash_function(str(number))
         bucket = buckets[hash]
-        for i, name in enumerate(bucket):
+        for i, n in enumerate(bucket):
                 
                   if n.number == number:
                          bucket[i] = Query(['add', number, name])
