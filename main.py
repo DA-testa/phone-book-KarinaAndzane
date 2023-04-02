@@ -39,9 +39,9 @@ class Query:
         if self.type == 'add':
             self.name = query[2]
 
-def hash_fucntion(,):
+def hash_fucntion(number):
         ans = 0
-        for c in reversed():
+        for c in reversed(number):
                 ans = (ans*255 + ord(c)) %1000043
         return ans % 1000
 
