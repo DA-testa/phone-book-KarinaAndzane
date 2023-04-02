@@ -48,11 +48,13 @@ def hash_function(number):
 def add (buckets,number, name):
         hash = hash_function(str(number))
         bucket = buckets[hash]
-        if number in bucket:
-                buckets[hash] = Query(['add', number, name])
-                return
+        for i, name in enumerate(bucket):
+                
+                  if number in bucket:
+                         bucket[i] = Query(['add', number, name])
+                          return
        
-        bucket[hash]= [Query(['add', number, name])] +bucket
+        buckets[hash]= [Query(['add', number, name])] +bucket
                 
 def delete (buckets, number):
         hash = hash_function(str(number))
