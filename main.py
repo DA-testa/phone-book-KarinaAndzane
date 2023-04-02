@@ -45,26 +45,27 @@ def hash_function(number):
                 ans = (ans*255 + ord(c)) %1000043
         return ans % 1000
 
-def add (number, name):
+def add (buckets,number, name):
         hash = hash_function(str(number))
         bucket = buckets[hash]
-        if number not in bucket:
-                buckets[hash] = [number]+bucket
-        else:
-                bucket[hash]= [number]
+        if number in bucket:
+                buckets[hash] = Query(['add', number, name])
+                return
+       
+        bucket[hash]= [Query(['add', number, name])] +bucket
                 
-def delete (number):
-        hashed = hash_function(str(number))
+def delete (buckets, number):
+        hash = hash_function(str(number))
         bucket = buckets[hash]
         for i in range(len(bucket)):
-                if bucket [i] == number:
+                if bucket [i].number == number:
                         bucket.pop(i)
                         break
                         
-def find(number):
-        hashed = hash_function(str(number))
-        if n in buckets[hashed]:
-                return n.name
+def find(buckets, number):
+        hash = hash_function(str(number))
+        if number in buckets[hash]:
+                return number.name
         return "not found"
 
 def read_queries():
