@@ -38,6 +38,8 @@ class Query:
         self.number = int(query[1])
         if self.type == 'add':
             self.name = query[2]
+        else:
+                self.name = None
 
 def hash_function(number):
         ans = 0
