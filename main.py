@@ -39,14 +39,14 @@ class Query:
         if self.type == 'add':
             self.name = query[2]
 
-def hash_fucntion(number):
+def hash_function(number):
         ans = 0
         for c in reversed(number):
                 ans = (ans*255 + ord(c)) %1000043
         return ans % 1000
 
 def add (number, name):
-        hash = hash_function()
+        hash = hash_function(str(number))
         bucket = buckets[hash]
         if number not in bucket:
                 buckets[hash] = [number]+bucket
