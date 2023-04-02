@@ -51,11 +51,9 @@ def add (buckets,number, name):
         hash = hash_function(str(number))
         bucket = buckets[hash]
         for i, n in enumerate(bucket):
-                
                   if n.number == number:
                          bucket[i] = Query(['add', number, name])
                          return
-       
         buckets[hash]= [Query(['add', number, name])] +bucket
                 
 def delete (buckets, number):
@@ -69,9 +67,7 @@ def delete (buckets, number):
 def find(buckets, number):
         hash = hash_function(str(number))
         for n in buckets[hash]:
-                
-                 if n.number ==  number:
-                                
+                 if n.number ==  number: 
                        return n.name
         return "not found"
 
@@ -102,6 +98,5 @@ def process_queries(queries):
                 result.append(response)
     return result
 
-if __name__ == '__main__':
-    write_responses(process_queries(read_queries()))
+write_responses(process_queries(read_queries()))
 
