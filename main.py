@@ -86,12 +86,12 @@ def process_queries(queries):
         if cur_query.type == 'add':
             # if we already have contact with such number,
             # we should rewrite contact's name
-              add(cur_query.number, cur_query.name)
+              add(buckets,cur_query.number, cur_query.name)
            
         elif cur_query.type == 'del':
-            delete(cur_query.number)
+            delete(buckets, cur_query.number)
         else:
-                response= find(cur_query.number)
+                response= find(buckets,cur_query.number)
                 result.append(response)
     return result
 
